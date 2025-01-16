@@ -1,0 +1,164 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Sudheer\\source\\repos\\EventEase\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{D8D3CACE-8464-46EC-A452-E1329D89C303}|EventEase.csproj|c:\\users\\sudheer\\source\\repos\\eventease\\components\\pages\\attendancemarker.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{D8D3CACE-8464-46EC-A452-E1329D89C303}|EventEase.csproj|solutionrelative:components\\pages\\attendancemarker.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D8D3CACE-8464-46EC-A452-E1329D89C303}|EventEase.csproj|c:\\users\\sudheer\\source\\repos\\eventease\\components\\pages\\eventdetails.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{D8D3CACE-8464-46EC-A452-E1329D89C303}|EventEase.csproj|solutionrelative:components\\pages\\eventdetails.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D8D3CACE-8464-46EC-A452-E1329D89C303}|EventEase.csproj|c:\\users\\sudheer\\source\\repos\\eventease\\components\\pages\\registerevent.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{D8D3CACE-8464-46EC-A452-E1329D89C303}|EventEase.csproj|solutionrelative:components\\pages\\registerevent.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D8D3CACE-8464-46EC-A452-E1329D89C303}|EventEase.csproj|c:\\users\\sudheer\\source\\repos\\eventease\\services\\attendanceservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D8D3CACE-8464-46EC-A452-E1329D89C303}|EventEase.csproj|solutionrelative:services\\attendanceservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D8D3CACE-8464-46EC-A452-E1329D89C303}|EventEase.csproj|c:\\users\\sudheer\\source\\repos\\eventease\\components\\pages\\eventlist.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{D8D3CACE-8464-46EC-A452-E1329D89C303}|EventEase.csproj|solutionrelative:components\\pages\\eventlist.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D8D3CACE-8464-46EC-A452-E1329D89C303}|EventEase.csproj|c:\\users\\sudheer\\source\\repos\\eventease\\models\\attendance.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D8D3CACE-8464-46EC-A452-E1329D89C303}|EventEase.csproj|solutionrelative:models\\attendance.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D8D3CACE-8464-46EC-A452-E1329D89C303}|EventEase.csproj|c:\\users\\sudheer\\source\\repos\\eventease\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D8D3CACE-8464-46EC-A452-E1329D89C303}|EventEase.csproj|solutionrelative:models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D8D3CACE-8464-46EC-A452-E1329D89C303}|EventEase.csproj|c:\\users\\sudheer\\source\\repos\\eventease\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D8D3CACE-8464-46EC-A452-E1329D89C303}|EventEase.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 308,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Attendance.cs",
+              "DocumentMoniker": "C:\\Users\\Sudheer\\source\\repos\\EventEase\\Models\\Attendance.cs",
+              "RelativeDocumentMoniker": "Models\\Attendance.cs",
+              "ToolTip": "C:\\Users\\Sudheer\\source\\repos\\EventEase\\Models\\Attendance.cs",
+              "RelativeToolTip": "Models\\Attendance.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAswAYAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-16T19:28:46.142Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{40ea2e6b-2121-4bb8-a43e-c83c04b51041}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "AttendanceMarker.razor",
+              "DocumentMoniker": "C:\\Users\\Sudheer\\source\\repos\\EventEase\\Components\\Pages\\AttendanceMarker.razor",
+              "RelativeDocumentMoniker": "Components\\Pages\\AttendanceMarker.razor",
+              "ToolTip": "C:\\Users\\Sudheer\\source\\repos\\EventEase\\Components\\Pages\\AttendanceMarker.razor",
+              "RelativeToolTip": "Components\\Pages\\AttendanceMarker.razor",
+              "ViewState": "AgIAABUAAAAAAAAAAAAlwDQAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-01-16T19:43:35.276Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Sudheer\\source\\repos\\EventEase\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\Sudheer\\source\\repos\\EventEase\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-16T19:32:16.801Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "EventList.razor",
+              "DocumentMoniker": "C:\\Users\\Sudheer\\source\\repos\\EventEase\\Components\\Pages\\EventList.razor",
+              "RelativeDocumentMoniker": "Components\\Pages\\EventList.razor",
+              "ToolTip": "C:\\Users\\Sudheer\\source\\repos\\EventEase\\Components\\Pages\\EventList.razor",
+              "RelativeToolTip": "Components\\Pages\\EventList.razor",
+              "ViewState": "AgIAACUAAAAAAAAAAAAcwDcAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-01-16T18:51:22.623Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "AttendanceService.cs",
+              "DocumentMoniker": "C:\\Users\\Sudheer\\source\\repos\\EventEase\\Services\\AttendanceService.cs",
+              "RelativeDocumentMoniker": "Services\\AttendanceService.cs",
+              "ToolTip": "C:\\Users\\Sudheer\\source\\repos\\EventEase\\Services\\AttendanceService.cs",
+              "RelativeToolTip": "Services\\AttendanceService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-16T17:48:41.761Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "RegisterEvent.razor",
+              "DocumentMoniker": "C:\\Users\\Sudheer\\source\\repos\\EventEase\\Components\\Pages\\RegisterEvent.razor",
+              "RelativeDocumentMoniker": "Components\\Pages\\RegisterEvent.razor",
+              "ToolTip": "C:\\Users\\Sudheer\\source\\repos\\EventEase\\Components\\Pages\\RegisterEvent.razor",
+              "RelativeToolTip": "Components\\Pages\\RegisterEvent.razor",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAAACsAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-01-16T03:00:29.079Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "User.cs",
+              "DocumentMoniker": "C:\\Users\\Sudheer\\source\\repos\\EventEase\\Models\\User.cs",
+              "RelativeDocumentMoniker": "Models\\User.cs",
+              "ToolTip": "C:\\Users\\Sudheer\\source\\repos\\EventEase\\Models\\User.cs",
+              "RelativeToolTip": "Models\\User.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAswBUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-16T18:53:01.696Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "EventDetails.razor",
+              "DocumentMoniker": "C:\\Users\\Sudheer\\source\\repos\\EventEase\\Components\\Pages\\EventDetails.razor",
+              "RelativeDocumentMoniker": "Components\\Pages\\EventDetails.razor",
+              "ToolTip": "C:\\Users\\Sudheer\\source\\repos\\EventEase\\Components\\Pages\\EventDetails.razor",
+              "RelativeToolTip": "Components\\Pages\\EventDetails.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-01-16T00:51:57.679Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

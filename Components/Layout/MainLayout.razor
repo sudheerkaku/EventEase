@@ -1,0 +1,45 @@
+﻿@inject EventEase.Services.UserService UserService
+@inherits LayoutComponentBase
+@inject NavigationManager Navigation
+
+<div class="page">
+    <div class="sidebar">
+        <NavMenu />
+    </div>
+
+    <main>
+        <div class="top-row px-4">
+            <a href="https://learn.microsoft.com/aspnet/core/" target="_blank">About</a>
+            <div class="navbar">
+                @if (UserService.IsAuthenticated)
+                {
+                    <span style="padding: 0px 15px;">Welcome, @UserService.GetCurrentUser().Name!</span>
+                    <button class="btn btn-secondary" @onclick="LogOut">Log Out</button>
+                }
+                else
+                {
+                    <a href="/register">Register</a>
+                    <a href="/login">Login</a>
+                }
+            </div>
+        </div>
+        
+        <article class="content px-4">
+            @Body
+        </article>
+    </main>
+</div>
+
+<div id="blazor-error-ui">
+    An unhandled error has occurred.
+    <a href="" class="reload">Reload</a>
+    <a class="dismiss">🗙</a>
+</div>
+
+@code {
+    private void LogOut()
+    {
+        UserService.LogOut();  // Log out the user by clearing the session
+        Navigation.NavigateTo("/login");  // Redirect to the login page after logout
+    }
+}

@@ -1,0 +1,103 @@
+﻿@page "/event/{EventId}"
+@using EventEase.Models
+@inject EventEase.Services.EventService EventService
+@rendermode InteractiveServer
+@inject NavigationManager Navigation
+
+<h3>Edit Event Details</h3>
+@if (loading)
+{
+    <p>Loading event details...</p>
+}
+else if (selectedEvent == null)
+{
+    <div class="alert alert-danger">
+        <p>Event not found. Please check the event ID or try again later.</p>
+        <button class="btn btn-primary" @onclick="NavigateToEventList">Go to Event List</button>
+    </div>
+}
+else
+{
+    <EditForm Model="selectedEvent" OnValidSubmit="HandleEdit" FormName="eventEditForm">
+        <DataAnnotationsValidator />
+
+        <div class="form-group">
+            <label for="name">Event Name</label>
+            <InputText id="name" class="form-control" @bind-Value="selectedEvent.EventName" />
+            <ValidationMessage For="() => selectedEvent.EventName" />
+        </div>
+
+        <div class="form-group">
+            <label for="date">Event Date</label>
+            <InputDate id="date" class="form-control" @bind-Value="selectedEvent.Date" />
+            <ValidationMessage For="() => selectedEvent.Date" />
+        </div>
+
+        <div class="form-group">
+            <label for="location">Location</label>
+            <InputText id="location" class="form-control" @bind-Value="selectedEvent.Location" />
+            <ValidationMessage For="() => selectedEvent.Location" />
+        </div>
+        <br />
+        <br />
+        <div class="form-group">
+            <button class="btn btn-success" type="submit">Save Changes</button>
+            <!-- Ensure Cancel button does not trigger form submission -->
+            <button class="btn btn-secondary" type="button" @onclick="CancelEdit">Cancel</button>
+        </div>
+    </EditForm>
+
+    @if (saveSuccess)
+    {
+        <p class="text-success">Event details updated successfully!</p>
+    }
+}
+
+@code {
+    [Parameter] public string EventId { get; set; }  // Route parameter for EventId
+
+    private Event selectedEvent;
+    private bool saveSuccess = false;
+    private bool loading = true;
+
+    protected override void OnInitialized()
+    {
+        if (int.TryParse(EventId, out int eventId))
+        {
+            // Simulate async data fetching
+            Task.Run(() =>
+            {
+                selectedEvent = EventService.GetEvents().FirstOrDefault(e => e.Id == eventId);
+                InvokeAsync(StateHasChanged); // Ensure UI is updated when data is fetched
+            });
+        }
+        else
+        {
+            loading = false;
+            // Handle invalid EventId, redirect to events list page or show an error message
+            Navigation.NavigateTo("/events");
+        }
+    }
+
+    private void CancelEdit()
+    {
+        // Navigate back to the event list or details view without saving changes
+        Navigation.NavigateTo("/events");
+    }
+
+    private void HandleEdit()
+    {
+        // Logic for handling the event update
+        EventService.UpdateEvent(selectedEvent);  // Update event in the service or database
+
+        saveSuccess = true;
+
+        // Redirect to the event list or details page after a short delay
+        Task.Delay(2000).ContinueWith(t => Navigation.NavigateTo("/events"));
+    }
+
+    private void NavigateToEventList()
+    {
+        Navigation.NavigateTo("/events");
+    }
+}

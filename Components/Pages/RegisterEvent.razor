@@ -1,0 +1,75 @@
+﻿@page "/registerevent"
+@using EventEase.Models
+@inject EventEase.Services.EventService EventService
+@rendermode InteractiveServer
+@inject NavigationManager Navigation
+
+<h3>Register for Event</h3>
+
+<EditForm Model="registerNewEvent" OnValidSubmit="HandleRegistration" FormName="eventRegisterForm">
+    <DataAnnotationsValidator />
+
+    <div class="form-group">
+        <label for="name">Event Name</label>
+        <InputText id="name" class="form-control" @bind-Value="registerNewEvent.EventName" />
+        <ValidationMessage For="() => registerNewEvent.EventName" />
+    </div>
+
+    <div class="form-group">
+        <label for="date">Event Date</label>
+        <InputDate id="date" class="form-control" @bind-Value="registerNewEvent.Date" />
+        <ValidationMessage For="() => registerNewEvent.Date" />
+    </div>
+
+    <div class="form-group">
+        <label for="location">Location</label>
+        <InputText id="location" class="form-control" @bind-Value="registerNewEvent.Location" />
+        <ValidationMessage For="() => registerNewEvent.Location" />
+    </div>
+    <br />
+    <br />
+    <div class="form-group">
+        <button class="btn btn-success" type="submit">Add Event</button>
+        <!-- Ensure Cancel button does not trigger form submission -->
+        <button class="btn btn-secondary" type="button" @onclick="CancelRegistration">Cancel</button>
+    </div>
+</EditForm>
+
+@if (registrationSuccess)
+{
+    <p>Thank you for registering!</p>
+}
+
+@code {
+    [Parameter] public string EventId { get; set; }  // Route parameter for EventId
+
+    private Event registerNewEvent;
+    private bool registrationSuccess = false;
+
+    protected override void OnInitialized()
+    {
+        registerNewEvent = new Event { Id = 0, EventName = "", Date = DateTime.Now, Location = "" };
+    }
+
+    private void CancelRegistration()
+    {
+        // Navigate back to the events list or event details without saving changes
+        Navigation.NavigateTo("/events");
+    }
+
+    private async Task HandleRegistration()
+    {
+        // Logic for handling registration (this could be saving to a database, etc.)
+        // For this example, we’ll just simulate registration
+
+        // You would call a method like EventService.RegisterUserForEvent(selectedEvent, registrationModel);
+        EventService.RegisterEvent(registerNewEvent);
+
+        // Show registration success message
+        registrationSuccess = true;
+
+        // Optionally, navigate to the events list after a short delay
+        await Task.Delay(2000);  // Optional delay before navigating
+        Navigation.NavigateTo("/events");  // Navigate to the events list or confirmation page
+    }
+}

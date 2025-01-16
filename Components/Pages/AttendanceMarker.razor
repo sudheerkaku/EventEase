@@ -1,0 +1,64 @@
+﻿@page "/attendance/{EventId}"
+@using EventEase.Models
+@inject EventEase.Services.AttendanceService AttendanceService
+@inject EventEase.Services.UserService UserService
+@rendermode InteractiveServer
+@inject NavigationManager Navigation
+
+<h3>Mark Attendance for Event</h3>
+
+@if (UserService.IsAuthenticated)
+{
+    <div class="form-group">
+        <button class="btn btn-primary" @onclick="MarkAttendance">Mark Attendance</button>
+    </div>
+
+    @if (attendanceMarked)
+    {
+        <p class="text-success">Attendance marked successfully!</p>
+        <br />
+        <br />
+        <h3>Attendee List:</h3>
+        @if (attendance != null)
+        {
+            <ul>
+                @foreach (var attendee in attendance)
+                {
+                    <li>@attendee.Name</li>
+                }
+            </ul>
+        }
+    }
+}
+else
+{
+    <p>Please log in to mark your attendance.</p>
+}
+
+@code {
+    [Parameter] public string EventId { get; set; }  // Route parameter for EventId
+    private bool attendanceMarked = false;
+    private List<Attendance> attendance;
+
+    protected override async Task OnInitializedAsync()
+    {
+        int.TryParse(EventId, out int eventId);
+        attendance = AttendanceService.GetAttendanceForEvent(eventId);
+    }
+
+    private void MarkAttendance()
+    {
+        int.TryParse(EventId, out int eventId);
+        var currentUser = UserService.GetCurrentUser();
+        var attendance = new Attendance
+            {
+                EventId = eventId,
+                UserId = currentUser.Id,
+                Name = currentUser.Name,
+                Timestamp = DateTime.Now
+            };
+
+        AttendanceService.MarkAttendance(attendance);
+        attendanceMarked = true;
+    }
+}
